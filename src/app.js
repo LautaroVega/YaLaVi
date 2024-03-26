@@ -22,6 +22,15 @@ app.use(expressSession({
 app.use(cookieParser());
 
 
+const mainRoutes = require('./routes/main');
+//const productsRoutes = require('./routes/productsRouter');
+//const userRoutes = require('./routes/userRouter')
+
+app.use('/', mainRoutes);
+//app.use('/user', userRoutes);
+//app.use('/products', productsRoutes);
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor iniciado http://localhost:${port}`);

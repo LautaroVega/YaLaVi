@@ -1,4 +1,108 @@
-body{
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del navbar */
+  
+  .navbar {
     background-color: #255000;
-    color: #ffffff;
-}
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilos del grupo superior */
+  
+  .navbar-superior {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+  }
+  
+  /* Estilos del logo */
+  
+  .navbar-izq img {
+    width: 20%;
+  }
+
+  .navbar-izq{
+    width: 26%;
+  }
+  
+  /* Estilos del contenido a la derecha */
+  
+  .navbar-der {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* Estilos del formulario */
+  
+  .navbar-der form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-der .input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .navbar-der .submit {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos del grupo inferior */
+  
+  .navbar-inferior {
+    order: 2;
+  }
+  
+  /* Estilos de la lista de enlaces */
+  
+  .navbar-der ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-der ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .navbar-der ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Media queries para adaptar el diseño a diferentes tamaños de pantalla */
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar-superior {
+      order: 2;
+    }
+  
+    .navbar-inferior {
+      order: 1;
+    }
+  
+    .navbar-der ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
